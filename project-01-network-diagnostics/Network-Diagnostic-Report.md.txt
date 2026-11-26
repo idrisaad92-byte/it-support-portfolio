@@ -1,0 +1,111 @@
+Network Connectivity Diagnosis – Windows 11
+
+Type de projet : Projet personnel – IT Support / Helpdesk
+Date : 25 novembre 2026
+
+1. Objectif du diagnostic
+
+Effectuer un diagnostic de connectivité réseau sur un poste Windows 11 afin de vérifier :
+
+* La communication avec la passerelle par défaut.
+* La connectivité vers Internet.
+* Le fonctionnement de la résolution DNS.
+
+2. Environnement technique
+
+Composant	Configuration
+Fabricant	HP
+Modèle	HP ProBook 450 G7
+Processeur	Intel Core i5-10210U
+Mémoire RAM	8 Go
+Système d’exploitation	Windows 11 Professionnel
+Version	10.0.26300
+
+3. Configuration réseau
+
+Paramètre	Valeur
+Adresse IPv4	192.168.1.23
+Masque de sous-réseau	255.255.255.0
+Passerelle par défaut	192.168.1.1
+DNS primaire configuré	8.8.8.8
+DNS secondaire configuré	8.8.4.4
+
+4. Tests effectués
+
+Test 1 – Connectivité avec la passerelle
+
+Commande :
+ping 192.168.1.1
+
+Résultats :
+
+* 4 paquets envoyés.
+* 4 paquets reçus.
+* 0 % de perte.
+* Temps moyen : 3 ms.
+
+Conclusion : La communication avec la passerelle par défaut fonctionne.
+
+Test 2 – Connectivité Internet
+
+Commande :
+ping 8.8.8.8
+
+Résultats :
+
+* 4 paquets envoyés.
+* 4 paquets reçus.
+* 0 % de perte.
+* Temps moyen : 25 ms.
+
+Conclusion : Le poste arrive à communiquer avec une adresse IP publique sur Internet.
+
+Test 3 – Résolution DNS
+
+Commande :
+nslookup google.com
+
+Résultat :
+
+* Le domaine google.com a été résolu.
+* Une adresse IPv4 et plusieurs adresses IPv6 ont été retournées.
+
+Conclusion : La résolution DNS fonctionne avec le serveur utilisé par le système.
+
+Test 4 – Vérification avec Google DNS
+
+Commande :
+nslookup google.com 8.8.8.8
+
+Résultat :
+
+* Serveur DNS : dns.google
+* Adresse du serveur : 8.8.8.8
+* Adresse IPv4 obtenue : 142.251.142.142
+* Adresse IPv6 obtenue : 2a00:1450:4003:810::200e
+
+Conclusion : Le serveur DNS Google répond correctement à la requête.
+
+5. Conclusion générale
+
+Les tests réalisés n’ont révélé aucun problème de connectivité réseau au moment du diagnostic.
+
+La communication avec la passerelle, l’accès à une adresse IP publique et la résolution DNS ont tous fonctionné correctement.
+
+Ce projet m’a permis de pratiquer les commandes Windows suivantes :
+
+* ipconfig /all
+* ping
+* nslookup
+* systeminfo
+
+6. Compétences pratiquées
+
+* Identification de la configuration matérielle et logicielle.
+* Lecture et interprétation d’une configuration IPv4.
+* Compréhension de la passerelle par défaut.
+* Diagnostic de connectivité réseau.
+* Vérification de la résolution DNS.
+* Analyse des résultats de commandes Windows.
+
+Nature du projet : Travail pratique personnel réalisé sur un ordinateur HP ProBook 450 G7 sous Windows 11.
